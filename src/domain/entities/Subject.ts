@@ -1,6 +1,8 @@
+import { SubjectId } from "../valueObjects/MateriaId";
+
 export class Subject {
   constructor(
-    public id: string,
+    public subjectId: SubjectId,
     public name: string,
     public prerequisites: Subject[] = []
   ) {}

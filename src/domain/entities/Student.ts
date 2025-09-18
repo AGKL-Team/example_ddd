@@ -14,11 +14,11 @@ export class Student {
    * @returns
    */
   enroll(subject: Subject): Enrollment {
-    const approvedIds = this.approvedSubjects.map((s) => s.id);
-    const currentIds = this.currentSubjects.map((s) => s.id);
+    const approvedIds = this.approvedSubjects.map((s) => s.subjectId.id);
+    const currentIds = this.currentSubjects.map((s) => s.subjectId.id);
 
     const missingPrerequisites = subject.prerequisites.filter(
-      (prereq) => !approvedIds.includes(prereq.id)
+      (prereq) => !approvedIds.includes(prereq.subjectId.id)
     );
 
     // All prerequisites approved
@@ -33,7 +33,7 @@ export class Student {
     // Allow conditional enrollment if only one prerequisite is missing and it's currently being taken
     if (
       missingPrerequisites.length === 1 &&
-      currentIds.includes(missingPrerequisites[0]!.id)
+      currentIds.includes(missingPrerequisites[0]!.subjectId.id)
     ) {
       return new Enrollment(
         subject,

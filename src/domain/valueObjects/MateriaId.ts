@@ -1,7 +1,7 @@
-export class MateriaId {
+export class SubjectId {
   constructor(private readonly value: string) {
     if (!value || value.trim() === "") {
-      throw new Error("MateriaId no puede ser vacío");
+      throw new Error("SubjectId no puede ser vacío");
     }
   }
 
@@ -9,7 +9,7 @@ export class MateriaId {
     return this.value;
   }
 
-  equals(other: MateriaId): boolean {
+  equals(other: SubjectId): boolean {
     return this.value === other.value;
   }
 }
