@@ -140,4 +140,10 @@ export class Alumno {
 
 ---
 
+## 7. Ejemplo Visual Comparando los Enfoques (DDD vs Repository/Service)
+
+<img width="1150" height="301" alt="image" src="https://github.com/user-attachments/assets/660bd5ff-9d35-422f-973a-7f1c81cf6e4f" />
+
+---
+
 > **Este ejemplo muestra cómo DDD facilita la comunicación y la evolución ágil del software, logrando soluciones alineadas con el negocio y fácilmente auditables.**
